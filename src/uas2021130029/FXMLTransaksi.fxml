@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="425.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas2021130029.FXMLTransaksiController">
+   <children>
+      <Label layoutX="25.0" layoutY="28.0" text="Form Transaksi Jual">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="25.0" layoutY="79.0" text="No Jual" />
+      <TextField fx:id="txtnojual" layoutX="85.0" layoutY="75.0" prefHeight="25.0" prefWidth="105.0" />
+      <Label layoutX="25.0" layoutY="117.0" text="Tanggal" />
+      <DatePicker fx:id="dtptanggal" layoutX="85.0" layoutY="113.0" prefHeight="25.0" prefWidth="105.0" />
+      <Label layoutX="25.0" layoutY="171.0" text="Pilih Customer" />
+      <TableView fx:id="tbvcust" layoutX="25.0" layoutY="196.0" onMouseClicked="#tbvcustklik" prefHeight="107.0" prefWidth="174.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="213.0" layoutY="171.0" text="Pilih Barang" />
+      <TableView fx:id="tbvbrg" disable="true" layoutX="213.0" layoutY="196.0" onMouseClicked="#tbvbrgklik" prefHeight="107.0" prefWidth="187.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Label layoutX="216.0" layoutY="348.0" prefHeight="17.0" prefWidth="93.0" text="Qty Brg" />
+      <TextField fx:id="txtqty" editable="false" layoutX="279.0" layoutY="344.0" prefHeight="25.0" prefWidth="86.0" />
+      <Label layoutX="25.0" layoutY="315.0" text="Id Member" />
+      <TextField fx:id="txtid" layoutX="94.0" layoutY="311.0" prefHeight="25.0" prefWidth="105.0" />
+      <TextField fx:id="txtkodebrg" editable="false" layoutX="279.0" layoutY="311.0" prefHeight="25.0" prefWidth="86.0" />
+      <Label layoutX="214.0" layoutY="315.0" text="Kode Brg" />
+      <Button fx:id="btntambahbrg" layoutX="374.0" layoutY="311.0" mnemonicParsing="false" onAction="#tambahbrgklik" text="+" />
+      <Button fx:id="btnhapusbrg" layoutX="373.0" layoutY="344.0" mnemonicParsing="false" onAction="#hapusbrgklik" prefHeight="25.0" prefWidth="25.0" text="-" />
+      <Button fx:id="btnsave" layoutX="207.0" layoutY="74.0" mnemonicParsing="false" onAction="#saveklik" prefHeight="64.0" prefWidth="77.0" text="Simpan Master Transaksi" textAlignment="CENTER" wrapText="true" />
+      <TableView fx:id="tbvdetil" layoutX="25.0" layoutY="385.0" onMouseClicked="#pilihdetil" prefHeight="140.0" prefWidth="297.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnbatal" layoutX="331.0" layoutY="461.0" mnemonicParsing="false" onAction="#batalklik" prefHeight="64.0" prefWidth="69.0" text="Batalkan Transaksi" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

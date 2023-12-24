@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="423.0" prefWidth="402.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas2021130029.FXMLJualController">
+   <children>
+      <Label layoutX="25.0" layoutY="22.0" text="Form Penjualan">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvjual" layoutX="25.0" layoutY="88.0" onMouseClicked="#pilihdata" prefHeight="101.0" prefWidth="355.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tbvdetil" layoutX="25.0" layoutY="269.0" prefHeight="101.0" prefWidth="355.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtnojual" layoutX="84.0" layoutY="54.0" />
+      <Label layoutX="25.0" layoutY="58.0" text="No Jual" />
+      <Button fx:id="btnawal" layoutX="30.0" layoutY="195.0" mnemonicParsing="false" onAction="#awalklik">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/USER/Music/kuliah/SEM 5/PBOL/uas-jonas_yehezkiel-2021130029/src/uas2021130029/first.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnsebelum" layoutX="76.0" layoutY="195.0" mnemonicParsing="false" onAction="#sebelumklik" prefHeight="30.0" prefWidth="35.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/USER/Music/kuliah/SEM 5/PBOL/uas-jonas_yehezkiel-2021130029/src/uas2021130029/prev.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnsesudah" layoutX="118.0" layoutY="195.0" mnemonicParsing="false" onAction="#sesudahklik" prefHeight="30.0" prefWidth="35.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="17.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/USER/Music/kuliah/SEM 5/PBOL/uas-jonas_yehezkiel-2021130029/src/uas2021130029/next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="btnakhir" layoutX="160.0" layoutY="195.0" mnemonicParsing="false" onAction="#akhirklik">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Users/USER/Music/kuliah/SEM 5/PBOL/uas-jonas_yehezkiel-2021130029/src/uas2021130029/last.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label layoutX="24.0" layoutY="250.0" text="Detil Penjualan:" />
+      <Label layoutX="217.0" layoutY="383.0" text="Total" />
+      <TextField fx:id="txttotal" layoutX="258.0" layoutY="379.0" prefHeight="25.0" prefWidth="115.0" />
+      <Button fx:id="btnhapus" layoutX="337.0" layoutY="195.0" mnemonicParsing="false" onAction="#hapusklik" prefHeight="36.0" prefWidth="27.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="16.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:/C:/Users/USER/Music/kuliah/SEM 5/PBOL/uas-jonas_yehezkiel-2021130029/src/uas2021130029/delete.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

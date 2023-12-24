@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="364.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="uas2021130029.FXMLSimulasiController">
+   <children>
+      <ListView fx:id="listcust" layoutX="21.0" layoutY="76.0" prefHeight="124.0" prefWidth="101.0" />
+      <ListView fx:id="listbrg" layoutX="136.0" layoutY="76.0" prefHeight="124.0" prefWidth="101.0" />
+      <Label layoutX="21.0" layoutY="14.0" text="Simulasi Penjualan">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="59.0" text="Customer" />
+      <Label layoutX="136.0" layoutY="59.0" text="Barang" />
+      <TextArea fx:id="txareajual" layoutX="21.0" layoutY="214.0" prefHeight="165.0" prefWidth="316.0" />
+      <Label layoutX="254.0" layoutY="59.0" text="Waktu (menit)" />
+      <TextField fx:id="txtwaktu" layoutX="254.0" layoutY="83.0" prefHeight="25.0" prefWidth="72.0" />
+      <Button fx:id="btnsimulasi" layoutX="254.0" layoutY="126.0" mnemonicParsing="false" onAction="#simulasiklik" prefHeight="70.0" prefWidth="72.0" text="Simulasi" />
+   </children>
+</AnchorPane>

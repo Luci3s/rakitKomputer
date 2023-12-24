@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="498.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas2021130029.FXMLDocumentController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="29.0" prefWidth="633.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Display Data">
+            <items>
+                  <MenuItem fx:id="DisplayBrg" mnemonicParsing="false" onAction="#DisplayBrgClick" text="Barang" />
+              <MenuItem fx:id="DisplayCust" mnemonicParsing="false" onAction="#DisplayCustClick" text="Customer" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Input Data">
+              <items>
+                  <MenuItem fx:id="InputBrg" mnemonicParsing="false" onAction="#InputBrgClick" text="Barang" />
+                <MenuItem fx:id="InputCust" mnemonicParsing="false" onAction="#InputCustCLick" text="Customer" />
+              </items>
+            </Menu>
+          <Menu mnemonicParsing="false" text="Transaction">
+               <items>
+                  <MenuItem fx:id="datajual" mnemonicParsing="false" onAction="#datajualklik" text="Data Penjualan" />
+                  <MenuItem fx:id="transaksi" mnemonicParsing="false" onAction="#transaksiklik" text="Input Transaksi" />
+                  <MenuItem fx:id="simulasi" mnemonicParsing="false" onAction="#simulasiklik" text="Simulasi" />
+               </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Report">
+              <items>
+                  <MenuItem fx:id="reportbrg" mnemonicParsing="false" onAction="#reportbrgklik" text="Report Barang" />
+                  <MenuItem fx:id="reportcust" mnemonicParsing="false" onAction="#reportcustklik" text="Report Customer" />
+                  <MenuItem fx:id="reportjual" mnemonicParsing="false" onAction="#reportjualklik" text="Report Penjualan" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="txtwaktu" layoutX="492.0" layoutY="467.0" text="Waktu" />
+      <ImageView fitHeight="152.0" fitWidth="178.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@cherry.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

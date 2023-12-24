@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="6a70ffa6-a499-470a-b9aa-299edc293793">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="81"/>
+	<queryString>
+		<![CDATA[select * from jual j
+inner join jual_detil d on j.nojual=d.nojual
+inner join customer c on c.idmember=j.idmember
+inner join barang b on b.kodebrg=d.kodebrg]]>
+	</queryString>
+	<field name="nojual" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tanggal" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idmember" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="kodebrg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="jumlah" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nama" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="alamat" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="namabrg" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tarif" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="gambar" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="subtotal" class="java.lang.Integer" resetType="Group" resetGroup="mjual" calculation="Sum">
+		<variableExpression><![CDATA[$F{jumlah}*$F{tarif}]]></variableExpression>
+	</variable>
+	<variable name="total" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{jumlah}*$F{tarif}]]></variableExpression>
+	</variable>
+	<group name="mjual">
+		<groupExpression><![CDATA[$F{nojual}]]></groupExpression>
+		<groupHeader>
+			<band height="176">
+				<textField>
+					<reportElement x="374" y="62" width="100" height="20" uuid="c7af6cd7-1406-4b0a-b862-0700942025e7"/>
+					<textElement>
+						<font fontName="Calibri" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="312" y="152" width="100" height="20" uuid="28b852ac-dea2-4850-8198-04ebe90a41a4"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tarif]]></text>
+				</staticText>
+				<line>
+					<reportElement x="18" y="138" width="517" height="1" uuid="e08676f1-5dc6-4a94-8820-ca75c69987b2"/>
+				</line>
+				<staticText>
+					<reportElement x="20" y="63" width="100" height="20" uuid="80456642-616a-4d6c-adfb-9f91145ed495"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[ID Member :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="374" y="89" width="100" height="20" uuid="860e561e-3e52-4f98-98bd-c39e394a5b97"/>
+					<textElement>
+						<font fontName="Calibri" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="12" y="28" width="100" height="20" uuid="ba42d2e6-d325-4298-9b05-34dadb7d87b5"/>
+					<textElement>
+						<font fontName="Calibri" size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[No Jual :]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="134" y="62" width="100" height="20" uuid="f512a1d8-ed5d-46cc-b516-7aa83dd191cd"/>
+					<textElement>
+						<font fontName="Calibri" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{idmember}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="126" y="28" width="100" height="20" uuid="dce1108d-5314-4f41-b087-5a1d2d4cbbbc"/>
+					<textElement>
+						<font fontName="Calibri" size="14"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nojual}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="260" y="89" width="100" height="20" uuid="dd4df780-ea9b-4136-87d5-f17ce73655cf"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Alamat :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="112" y="152" width="100" height="20" uuid="b051b82a-bb88-4520-9789-43bffcde2066"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama Barang]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="226" y="152" width="63" height="20" uuid="0cd13209-ea7c-454f-be53-8f2d68a4cbbe"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Jumlah]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="134" y="89" width="100" height="20" uuid="be1672c0-f479-4140-b3fb-f21a64587531"/>
+					<textElement>
+						<font fontName="Calibri" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="20" y="89" width="100" height="20" uuid="431c9d6c-7e25-4df7-ab0f-a239bc8db0c1"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Nama Customer :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="18" y="152" width="77" height="20" uuid="f113e2a0-1026-4d34-bf67-5ca28130b1e8"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Kode Barang]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="83" y="30" width="209" height="28" uuid="c441e6cf-8a48-474d-8058-e184ec35eefe"/>
+					<textElement>
+						<font fontName="Calibri" size="18" isBold="true"/>
+					</textElement>
+					
+				</staticText>
+				<staticText>
+					<reportElement x="260" y="62" width="100" height="20" uuid="d739ed9b-4902-4aa5-89e4-d3de453e720d"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Tanggal :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="424" y="152" width="100" height="20" uuid="659d0905-48cf-4763-bdf6-2082c02c7eed"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Bayar]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50">
+				<staticText>
+					<reportElement x="312" y="16" width="100" height="20" uuid="247bd057-a8d6-4eb0-9322-fa7c31bca196"/>
+					<textElement>
+						<font fontName="Calibri" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Subtotal]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="424" y="16" width="100" height="20" uuid="ef23f18f-39f9-4a80-9e41-cb35b9adec43"/>
+					<textElement>
+						<font fontName="Calibri" size="11"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{subtotal}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="47" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="14" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="14" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement x="18" y="10" width="77" height="20" uuid="3646c7a9-de79-46ff-a4a0-1395ba9ef1af"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{kodebrg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="10" width="100" height="20" uuid="8edeed4f-50fc-423a-85fe-28b3dee6d222"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{namabrg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="226" y="10" width="63" height="20" uuid="4d14a817-5a46-4353-90c4-fd2361e0a0ca"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jumlah}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="312" y="10" width="100" height="20" uuid="e80def62-0d66-47a9-bd54-375e6f98924e"/>
+				<textElement>
+					<font fontName="Calibri" size="11"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tarif}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="424" y="10" width="100" height="20" uuid="9018322b-71c3-461c-97ab-3201a5f7f625"/>
+				<textFieldExpression><![CDATA[$F{jumlah}*$F{tarif}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="9" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="9" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch">
+			<staticText>
+				<reportElement x="312" y="10" width="100" height="20" uuid="c5c72301-437e-47fe-b6a5-129345f65a3c"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="424" y="10" width="100" height="20" uuid="04cb95ba-1765-438a-990f-070272353649"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

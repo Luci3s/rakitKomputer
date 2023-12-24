@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="376.0" prefWidth="440.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="uas2021130029.FXMLDisplayCustController">
+   <children>
+      <Label layoutX="28.0" layoutY="27.0" text="Display Data Customer">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tbvcust" layoutX="28.0" layoutY="96.0" prefHeight="184.0" prefWidth="385.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button fx:id="btntambah" layoutX="28.0" layoutY="292.0" mnemonicParsing="false" onAction="#tambahklik" prefHeight="27.0" prefWidth="37.0" text="+">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnkurang" layoutX="76.0" layoutY="292.0" mnemonicParsing="false" onAction="#kurangklik" prefHeight="39.0" prefWidth="37.0" text="-">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnubah" layoutX="123.0" layoutY="292.0" mnemonicParsing="false" onAction="#ubahklik" prefHeight="39.0" prefWidth="44.0" text="edit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnkeluar" layoutX="385.0" layoutY="26.0" mnemonicParsing="false" onAction="#keluarklik" text="x">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnawal" layoutX="252.0" layoutY="297.0" mnemonicParsing="false" onAction="#awalklik" text="|&lt;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsebelum" layoutX="294.0" layoutY="297.0" mnemonicParsing="false" onAction="#sebelumklik" prefHeight="30.0" prefWidth="35.0" text="&lt;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnsesudah" layoutX="335.0" layoutY="297.0" mnemonicParsing="false" onAction="#sesudahklik" prefHeight="30.0" prefWidth="35.0" text="&gt;">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnakhir" layoutX="378.0" layoutY="297.0" mnemonicParsing="false" onAction="#akhirklik" text="&gt;|">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="235.0" layoutY="71.0" text="search" />
+      <TextField fx:id="txtcari" layoutX="276.0" layoutY="67.0" onKeyReleased="#cariData" prefHeight="25.0" prefWidth="135.0" promptText="by idmember/nama" />
+   </children>
+</AnchorPane>
